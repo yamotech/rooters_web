@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sport_category_id: 1
+  sport_name_ja: MyString
+  sport_name_en: MyString
+  sport_type: MyString
+  sport_description: MyString
+  stadium_id: 1
+  sport_date: 2016-07-09
+  disabled: 1
+
+two:
+  sport_category_id: 1
+  sport_name_ja: MyString
+  sport_name_en: MyString
+  sport_type: MyString
+  sport_description: MyString
+  stadium_id: 1
+  sport_date: 2016-07-09
+  disabled: 1
