@@ -1,5 +1,14 @@
 <div class="row">
   <div class="col-md-8">
+    <form class="form-inline">
+      <div class="form-group">
+        <%= search_form_for @q do |f| %>
+          <%= f.search_field :sport_name_ja_or_sport_type_or_sport_description_cont, placeholder: "タイトルか本文を検索", class: "form-control" %>
+      </div>
+          <%= f.submit "検索", class: "btn btn-primary" %>
+        <% end %>
+    </form>
+
     <% @sports.each do |sport| %>
       <div class="article">
         <h2><%= sport.sport_name_ja %></h2>

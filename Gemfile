@@ -29,6 +29,7 @@ gem 'gmaps4rails'
 gem 'geocoder'
 
 gem 'kaminari'
+gem 'ransack'
 
 gem 'event-calendar', :require => 'event_calendar'
 
