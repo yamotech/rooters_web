@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  get 'map/index'
+  root 'map#index'
+
+  get '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   devise_for :users
   resources :sports
+  resources :comments, except: [:index, :show]
+  resources :map
   # root 'sports#index'
-  root 'map#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

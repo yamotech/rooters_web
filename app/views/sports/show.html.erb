@@ -1,2 +1,36 @@
-<h1>Sports#show</h1>
-<p>Find me in app/views/sports/show.html.erb</p>
+<div class="row">
+  <div class="col-md-12">
+    <h1><%= @sport.sport_name_ja %></h1>
+    <p><%= @sport.sport_name_en %></p>
+    <p><%= @sport.sport_type %></p>
+    <p><%= @sport.sport_date %></p>
+    <p><%= link_to "競技場", map_path(@sport.id) %></p>
+    <hr>
+    <p>
+      <%= simple_format(@sport.sport_description) %>
+    </p>
+    <hr>
+
+    <hr />
+    <h2>コメント一覧</h2>
+    <% @comments.each do |comment| %>
+      <p>
+        <%= comment.body %>
+      </p>
+      <p>
+        <%= link_to "編集", edit_comment_path(comment), class: "btn btn-default" %>
+        <%= link_to "削除する", comment_path(comment), method: :delete, class: "btn btn-warning", data: { confirm: "コメントを本当に削除しますか？"} %>
+      </p>
+    <% end %>
+
+    <hr />
+    <%= form_for(@comment, url: { controller: :comments, action: :create }) do |f| %>
+      <div class="form-group">
+        <%= f.label :body , 'コメント' %><br>
+        <%= f.text_area :body, class: "form-control" %>
+      </div>
+      <%= f.hidden_field :sport_id, value: @sport.id %>
+      <%= f.submit "コメントする", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

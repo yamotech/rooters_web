@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709050444) do
+ActiveRecord::Schema.define(version: 20160709080829) do
 
   create_table "arenas", force: :cascade do |t|
     t.string   "arena_name"
@@ -22,6 +22,24 @@ ActiveRecord::Schema.define(version: 20160709050444) do
     t.float    "distance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "body"
+    t.integer  "sport_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["sport_id"], name: "index_comments_on_sport_id"
+
+  create_table "events", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.string   "name",       null: false
+    t.datetime "start_at",   null: false
+    t.datetime "end_at",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sports", force: :cascade do |t|

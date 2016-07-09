@@ -4,5 +4,8 @@ class SportsController < ApplicationController
   end
 
   def show
+    @sport = Sport.find(params[:id])
+    @comment = Comment.new
+    @comments = @sport.comments
   end
 end

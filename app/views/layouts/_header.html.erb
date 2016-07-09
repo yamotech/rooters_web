@@ -15,7 +15,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><%= link_to 'トップページ', sports_path %></li>
-        <li><a href="#">新規スケジュール</a></li>
+        <li><%= link_to '競技場一覧', map_index_path %></li>
+        <li><%= link_to 'スケジュール', calendar_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
