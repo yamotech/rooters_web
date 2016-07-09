@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'map/index'
+
   devise_for :users
   resources :sports
-  root 'sports#index'
+  # root 'sports#index'
+  root 'map#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

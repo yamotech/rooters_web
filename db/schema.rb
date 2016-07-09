@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709023721) do
+ActiveRecord::Schema.define(version: 20160709050444) do
+
+  create_table "arenas", force: :cascade do |t|
+    t.string   "arena_name"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "url"
+    t.float    "distance"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "sports", force: :cascade do |t|
     t.integer  "sport_category_id"
@@ -24,17 +35,6 @@ ActiveRecord::Schema.define(version: 20160709023721) do
     t.integer  "disabled"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-  end
-
-  create_table "stadia", force: :cascade do |t|
-    t.string   "stadium_name"
-    t.string   "address"
-    t.float    "lat"
-    t.float    "lon"
-    t.string   "url"
-    t.float    "distance"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
