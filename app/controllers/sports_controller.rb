@@ -1,6 +1,6 @@
 class SportsController < ApplicationController
   def index
-    @sports = Sport.all.order(created_at: :desc)
+    @sports = Sport.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   def show

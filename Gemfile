@@ -28,6 +28,8 @@ gem 'devise'
 gem 'gmaps4rails'
 gem 'geocoder'
 
+gem 'kaminari'
+
 gem 'event-calendar', :require => 'event_calendar'
 
 # Use ActiveModel has_secure_password
