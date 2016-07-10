@@ -43,15 +43,6 @@ ActiveRecord::Schema.define(version: 20160710004048) do
 
   add_index "comments", ["sport_id"], name: "index_comments_on_sport_id"
 
-  create_table "events", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.string   "name",       null: false
-    t.datetime "start_at",   null: false
-    t.datetime "end_at",     null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "sports", force: :cascade do |t|
     t.integer  "sport_category_id"
     t.string   "sport_name_ja"
