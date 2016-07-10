@@ -36,6 +36,12 @@ gem 'seed-fu', '~> 2.3'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
+gem 'twitter-bootswatch-rails', '~> 3.1.1'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'execjs'
+gem 'less-rails'
+gem 'therubyracer'
+
 gem 'event-calendar', :require => 'event_calendar'
 
 # Use ActiveModel has_secure_password
