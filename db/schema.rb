@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160709080829) do
+ActiveRecord::Schema.define(version: 20160710004048) do
 
   create_table "arenas", force: :cascade do |t|
     t.string   "arena_name"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20160709080829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "sport_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bookmarks", ["sport_id"], name: "index_bookmarks_on_sport_id"
+  add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id"
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"

@@ -33,6 +33,9 @@ gem 'ransack'
 
 gem 'seed-fu', '~> 2.3'
 
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
 gem 'event-calendar', :require => 'event_calendar'
 
 # Use ActiveModel has_secure_password

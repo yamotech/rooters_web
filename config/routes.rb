@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'map#index'
+  root 'sports#index'
 
   get '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   resources :sports
   resources :comments, except: [:index, :show]
   resources :map
-  # root 'sports#index'
+
+  resources :sports do
+    get "bookmarks/toggle"
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
