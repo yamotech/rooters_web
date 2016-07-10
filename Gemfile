@@ -31,6 +31,8 @@ gem 'geocoder'
 gem 'kaminari'
 gem 'ransack'
 
+gem 'seed-fu', '~> 2.3'
+
 gem 'event-calendar', :require => 'event_calendar'
 
 # Use ActiveModel has_secure_password
