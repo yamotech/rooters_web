@@ -42,7 +42,11 @@ gem 'execjs'
 gem 'less-rails'
 gem 'therubyracer'
 
-gem 'event-calendar', :require => 'event_calendar'
+# fullcalendar
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
+gem 'jquery-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

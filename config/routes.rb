@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'sports#index'
+  get 'calendar/index'
 
-  get '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  root 'sports#index'
 
   devise_for :users
   resources :sports
