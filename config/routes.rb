@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'sports#index'
 
   devise_for :users
-  resources :sports
+  # resources :sports
   resources :comments, except: [:index, :show]
   resources :map
 

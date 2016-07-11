@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <p>
       <%= link_to sport_bookmarks_toggle_path(@sport), id: 'bookmark-link', remote: true do %>
-        <%=raw bookmark_icon(@sport, current_user) %>
+        <%= raw bookmark_icon(@sport, current_user) %>
       <% end %>
     </p>
 
