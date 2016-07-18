@@ -42,6 +42,8 @@ gem 'execjs'
 gem 'less-rails'
 gem 'therubyracer'
 
+gem 'google_drive'
+
 # fullcalendar
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
