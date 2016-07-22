@@ -7,7 +7,7 @@ class CreateSports < ActiveRecord::Migration
       t.string :sport_type
       t.string :sport_description
       t.integer :stadium_id
-      t.date :sport_date
+      t.string :sport_date
       t.integer :disabled
 
       t.timestamps null: false

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160710004048) do
+ActiveRecord::Schema.define(version: 20160722133236) do
 
   create_table "arenas", force: :cascade do |t|
     t.string   "arena_name"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160710004048) do
     t.string   "sport_type"
     t.string   "sport_description"
     t.integer  "stadium_id"
-    t.date     "sport_date"
+    t.string   "sport_date"
     t.integer  "disabled"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false

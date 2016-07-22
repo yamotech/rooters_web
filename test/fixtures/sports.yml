@@ -7,7 +7,7 @@ one:
   sport_type: MyString
   sport_description: MyString
   stadium_id: 1
-  sport_date: 2016-07-09
+  sport_date: MyString
   disabled: 1
 
 two:
@@ -17,5 +17,5 @@ two:
   sport_type: MyString
   sport_description: MyString
   stadium_id: 1
-  sport_date: 2016-07-09
+  sport_date: MyString
   disabled: 1

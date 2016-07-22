@@ -1,17 +1,24 @@
-Arena.seed do |a|
-  a.arena_name = "北上総合運動公園北上陸上競技場",
-  a.address = "岩手県北上市相去町高前檀27-36",
-  a.latitude = 39.2588339,
-  a.longitude = 141.092891,
-  a.url = "http://www.iwate2016.jp/kokutai_game/track_and_field#530",
-  a.distance = 0
-end
+require 'csv'
 
-Arena.seed do |a|
-  a.arena_name = "盛岡市立総合プール",
-  a.address = "岩手県盛岡市本宮5-3-1",
-  a.latitude = 39.6904256,
-  a.longitude = 141.1227426,
-  a.url = "http://www.iwate2016.jp/kokutai_game/swimming#13591",
-  a.distance = 0
+csv = CSV.read('db/fixtures/arena.csv')
+
+csv.each_with_index do |arena, i|
+  # skip a label row
+  next if i === 0
+
+  arena_name = arena[1]
+  address = arena[2]
+  latitude = arena[3]
+  longitude = arena[4]
+  url = arena[5]
+  distance = arena[6]
+
+  Arena.seed do |a|
+    a.arena_name = arena_name
+    a.address = address
+    a.latitude = latitude
+    a.longitude = longitude
+    a.url = url
+    a.distance = distance
+  end
 end

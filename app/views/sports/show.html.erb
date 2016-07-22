@@ -10,7 +10,7 @@
     <p><%= @sport.sport_name_en %></p>
     <p><%= @sport.sport_type %></p>
     <p><%= @sport.sport_date %></p>
-    <%= link_to "競技場", map_path(@sport.id), class: "btn btn-success btn-sm" %>
+    <%= link_to "競技場", map_path(@sport.stadium_id), class: "btn btn-success btn-sm" %>
     <hr>
     <p>
       <%= simple_format(@sport.sport_description) %>
